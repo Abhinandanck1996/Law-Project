@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "url":"https://www.estatelawga.com/wp-content/uploads/sites/1201616/2021/06/iStock-1058846066web2-compressed-compressed.jpg",
+      "title":"Estate Planning",
+      "text":"Get Help"
+
+    }
+    ,  {
+      "id": 2,
+      "url":"https://www.estatelawga.com/wp-content/uploads/sites/1201616/2021/06/iStock-1088374078web-new-compressed.jpg",
+      "title":"Fiduciary Litigation",
+      "text":"Get Help"
+
+    },
+    {
+      "id": 3,
+      "url":"https://www.estatelawga.com/wp-content/uploads/sites/1201616/2021/06/iStock-460477381web2-compressed-compressed.jpg",
+      "title":"Long-Term Care",
+      "text":"Get Help"
+
+    },
+    {
+      "id": 4,
+      "url":"https://www.estatelawga.com/wp-content/uploads/sites/1201616/2021/06/iStock-819382468web-compressed.jpg",
+      "title":"Special Needs Planning",
+      "text":"Get Help"
+
+    }
+  ]
+}
