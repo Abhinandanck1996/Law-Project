@@ -6,6 +6,7 @@ let UsernameRef=useRef();
 let EmailRef=useRef();
 let PhoneRef=useRef();
 let DisclimerRef=useRef();
+let [item,setItem]=useState('')
 
 let HandleClick=()=>{
     let name=UsernameRef.current.value;
@@ -13,6 +14,7 @@ let HandleClick=()=>{
     let phone=PhoneRef.current.value;
     console.log({name,email,phone});
 }
+
 let HandleClick1=()=>{
     setDisc(!disc)
     if (disc==true) {
@@ -49,7 +51,7 @@ let HandleClick1=()=>{
                     <span style={{color:"#323232"}}> Disclaimer: The use of the internet or this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.</span>
                 </div>
             <div className='submit'>
-                    <button onClick={HandleClick}>Submit</button>
+                    <button  onClick={HandleClick}>Submit</button>
                 </div>
         </div>
        </div>

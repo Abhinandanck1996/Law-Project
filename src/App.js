@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch ,Route} from "react-router-dom";
+import { BrowserRouter, Switch ,Route, Link} from "react-router-dom";
 import Home from "./Home/Home";
 import Product from "./Home/Product";
 import Navbar from "./Navbar/Navbar";
@@ -8,6 +8,9 @@ import Practice from "./Home/Practice";
 import Blog from "./Home/Blog";
 import Contact from "./Home/Contact";
 import React ,{useRef,useState}from 'react';
+import Common from "./Home/Common";
+import Notfound from "./Home/Notfound";
+import Attorney from "./Home/Attorney";
 
 
 const App = () => {
@@ -38,11 +41,13 @@ const App = () => {
         <div className="Main-text"><BrowserRouter>
             <Navbar/>
             <Switch>
-                <Route path="/" exact><Home/></Route>
-                <Route path="/Product" exact><Product/></Route>
-                <Route path="/Practice" exact><Practice/></Route>
+                <Route path="/" component={Home} exact/>
+                <Route path="/Product" component={Product} exact/>
+                <Route path="/Practice" component={Practice} exact/>
+                <Route path='/attorney'component={Attorney} exact/>
                 <Route path="/blog" exact><Blog search={SearchRef} Handleclick={HandleClick}/></Route>
                 <Route path="/contact" exact><Contact discliamer={DisclimerRef} HandleClick1={HandleClick1}/> </Route>
+                <Route path="*" component={Notfound} exact/>
             </Switch>
             </BrowserRouter></div>
         </article>

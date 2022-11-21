@@ -1,81 +1,197 @@
-import { useRef } from "react";
+import React, { Component } from 'react'
 
-const Contact = (props) => {
-    let DisclimerRef=props.discliamer;
-    let HandleClick=props.HandleClick1;
+export default class Contact extends Component {
+  constructor() {
+    super();
+    this.state = {
+      Emp_name: "",
+      Emp_email: "",
+      Emp_Phone: "",
+      Emp_case: "",
+      Emp_states: "",
+      Emp_comp: ""
+    };
+  }
 
-    let UsernameRef=useRef();
-let EmailRef=useRef();
-let PhoneRef=useRef();
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+   window.localStorage.setItem("Emp_name", this.state.Emp_name);
+    window.localStorage.setItem("Emp_email", this.state.Emp_email);
+    window.localStorage.setItem("Emp_Phone", this.state.Emp_Phone);
+    window.localStorage.setItem("Emp_case", this.state.Emp_case);
+    window.localStorage.setItem("Emp_states", this.state.Emp_city);
+    window.localStorage.setItem("Emp_comp", this.state.Emp_comp);
+     
+   setTimeout(() => {
+     window.localStorage.removeItem("Emp_name");
+     window.localStorage.removeItem("Emp_email");
+     window.localStorage.removeItem("Emp_Phone");
+     window.localStorage.removeItem("Emp_case");
+     window.localStorage.removeItem("Emp_states");
+     window.localStorage.removeItem("Emp_comp");
+  
+    
+   }, 15000);
+  };
+  componentDidMount(){
+    this.setState({
+      Emp_name:window.localStorage.getItem("Emp_name"),
+      Emp_ID:window.localStorage.getItem("Emp_email"),
+     Emp_Sal:window.localStorage.getItem("Emp_Phone"),
+     Emp_Des:window.localStorage.getItem("Emp_case"),
+   })
+  
+  }
 
-let HandleClick1=()=>{
-    let name=UsernameRef.current.value;
-    let email=EmailRef.current.value;
-    let phone=PhoneRef.current.value;
-    console.log({name,email,phone});
-}
-    return ( 
-        <div className="product-div">
-        <div className="product-div1">
-            <h2>Caring For You In The Long Term</h2>
-        </div>
-        <div className="contact-page">
-            <h2>Contact</h2>
-            <p>While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call the firm or complete the intake form below.</p>
-        <p>Fields marked with an <span style={{color:"#e80000"}}>*</span> are required</p>
+  
 
-        <div className="contact-page1">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" ref={UsernameRef}/>
-        </div>
-        <div className="contact-page1">
-            <label htmlFor="email" >Email</label>
-            <input type="text" name="email" id="email" ref={EmailRef}/>
-        </div>
-        <div className="contact-page1">
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" ref={PhoneRef}/>
-        </div>
-        <div className="contact-page1">
-        <label for="cars">India States</label>
-  <select id="cars" name="cars">
-    <option value="volvo">Karnataka</option>
-    <option value="saab">Andra Pradesh</option>
-    <option value="saab">Telangana</option>
-    <option value="fiat">Kerala</option>
-    <option value="audi">Tamil Nadu</option>
-    <option value="saab">Goa</option>
-    <option value="saab">Madhya Pradesh</option>
-    <option value="saab">Gujarat</option>
-  </select>
-        </div>
-        <div style={{marginTop:"20px"}}>
-        <label for="nf-field-14_1" id="nf-label-field-14_1">How would you like to be contacted?  </label>
-        <input type="checkbox" id="html" name="fav_language" value="email" style={{marginTop:"10px"}} />
-  <label for="email" style={{position:"relative",top:"-20px",left:"12px"}}>Email</label>
-  <input type="checkbox" id="css" name="fav_language" value="phone"/>
-  <label for="phone" style={{position:"relative",top:"-20px",left:"12px"}}>Phone</label>
-        </div>
-        <div className="contact-page1"><label htmlFor="text-area">Brief description of your legal issue.</label>
-            <textarea id="w3review" name="w3review" rows="4" cols="50"/>
-</div>
-                <div  className="btn">
-                    <button onClick={HandleClick}>Discliamer</button>
-                    <button>Privacy Policy</button>
-                </div>
-                <div className='disc' ref={DisclimerRef}>
-                    <span style={{color:"#323232"}}> Disclaimer: The use of the internet or this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.</span>
-                </div>
-            <div className="contact-page1">
-                    <button onClick={HandleClick1}>Get Started</button>
-                </div>
-        </div>
+  LocalStorage = () => {
+    console.log(this.state.Emp_name);
+    console.log(this.state.Emp_email);
+    console.log(this.state.Emp_Phone);
+    console.log(this.state.Emp_case);
+  }
+
+  render() {
+    return (
+     <div className='contact-Page'>
+         <section className="authBlock">
+        <article>
+          <h2>Contact Us</h2>
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="Emp_name"
+                placeholder="enter name"
+                onChange={this.handleChange}
+                value={this.state.Emp_name}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="ID">Email</label>
+              <input
+                type="text"
+                id="ID"
+                name="Emp_email"
+                placeholder="enter email"
+                onChange={this.handleChange}
+                value={this.state.Emp_ID}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="salary">Phone</label>
+              <input
+                type="text"
+                id="salary"
+                name="Emp_Phone"
+                placeholder="enter Phone"
+                onChange={this.handleChange}
+                value={this.state.Emp_Sal}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="designation">Area Of Case</label>
+              <select
+                id="designation"
+                name="Emp_case"
+                onChange={this.handleChange}
+              >
+                <option value="">Choose Case</option>
+                <option value="Estate Planning">Estate Planning</option>
+                <option value="Criminal Law">Criminal Law</option>
+                <option value="Fiduciary Litigation">Fiduciary Litigation</option>
+                <option value="Long-Term Care">Long-Term Care</option>
+                <option value="Special Needs Planning">Special Needs Planning</option>
+              </select>
+            </div>
+
+            <div className="form-group1" id="form1">
+              <label htmlFor="skills">Us States</label>
+              <br />
+              <br />
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_states"
+                value="Albama"
+                onChange={this.handleChange}
+              />
+              Albama
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_skills"
+                value="Alaska"
+                onChange={this.handleChange}
+              />
+              Alaska
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_skills"
+                value="California"
+                onChange={this.handleChange}
+              />
+              California
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_skills"
+                value="Colorado"
+                onChange={this.handleChange}
+              />
+              Colorado
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_skills"
+                value="Hawali"
+                onChange={this.handleChange}
+              />
+              Hawali
+              <input
+                type="checkbox"
+                id="skills"
+                name="Emp_skills"
+                value="New York"
+                onChange={this.handleChange}
+              />
+              New York
+            </div>
+            <div className="form-group">
+              <label htmlFor="comp">Message</label>
+              <textarea
+                type="text"
+                id="comp"
+                name="Emp_comp"
+                placeholder="Describe Breifly"
+                onChange={this.handleChange}
+                value={this.state.Emp_comp}
+              />
+            </div>
+            <div className="form-group">
+              <button className="button" onClick={this.LocalStorage}>Sign Up</button>
+            </div>
+          </form>
+        
+        </article>
+      </section>
+      <section>
+        <article>
         <div className="Main-div7">
         <p className='p'>© 2022 <a href="#" className='Main-a'>Hill & Watchko, LLC</a>• All Rights Reserved</p>
         <p><a href="#" className='Main-a1'>Disclaimer</a>| <a href="#" className='Main-a1'> Site Map</a>|<a href="#" className='Main-a1'>Privacy Policy </a>|<a href="#" className='Main-a1'>Business Development Solutions</a>| by<a href="#" className='Main-a1'> FindLaw,</a>|  part of Thomson Reuters</p> 
      </div>
-        </div>
-     );
+        </article>
+      </section>
+     </div>
+    );
+  }
 }
- 
-export default Contact;

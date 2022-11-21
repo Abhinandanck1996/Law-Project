@@ -489,3 +489,299 @@ label{
 .contact-page1 button:hover{
     background-color: #323232;
 }
+.pagenot,.Attorney{
+    position: absolute;
+    top: 63px;
+    right: 0px;
+    width: 100%;
+}
+.pagenot h2{
+    text-align: center;
+}
+.product-main3 h1{
+    font-size: 40px;
+}
+.product-main3 {
+    flex: 4;
+}
+.product-main3 p,
+.product-main3 li{
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: justify;
+}
+.product-main3 li a{
+    color: #2D5899;
+}
+.product-main3 li a:hover{
+    color:#333333;
+    text-decoration: none;
+}
+.product-main4{
+    flex: 2;
+    background-color: #111439;
+    height:auto;
+    margin-left: 30px;
+}
+
+.product-main4 h2{
+    font-family:'Libre Baskerville',Georgia,"Times New Roman",serif;
+    font-size: 26px;
+    color: #fff;
+    margin-left: 20px;
+}
+.product-main4 li{
+    list-style-type: none;
+
+}
+.product-main4 ul{
+    margin-top: 10px;
+}
+.product-main4 li a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family:'Libre Baskerville',Georgia,"Times New Roman",serif;
+    line-height: 2em !important;
+    width: 80%;
+    padding-top: 10px;
+   
+}
+.product-main4 li a:hover{
+    text-decoration: none;
+    color: #7484f1;
+}
+.Attorney-image{
+    margin-top: 20px;
+    background-color: #EEEEEE;
+    width: 24%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.Attorney-image h4{
+    text-align: center;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.authBlock article{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 10px;
+   
+}
+
+.authBlock h2{
+    color: black;
+    text-transform: uppercase;
+}
+.authBlock .form-group {
+
+   padding: 10px;
+    width: 600px;
+    margin: 0px auto;
+   
+}
+
+.authBlock .form-group input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ffc10742;
+    color:black;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+.authBlock .form-group input::placeholder{
+    color: #333333;
+}
+.authBlock .form-group input:focus{
+    background-color: gray;
+}
+.authBlock .form-group label{
+    font-weight: bold;
+    padding: 0px 0;
+    color: black;
+    float: left;
+}
+.authBlock .form-group button{
+    padding: 20px;
+    width: 25%;
+    display: block;
+    border: none;
+    color: #111;
+position: relative;
+left: 40%;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #1DE761;
+}
+
+.authBlock .form-group button:hover{
+    background-color: crimson;
+    color: #fff;
+}
+
+.authBlock .form-group1 label{
+    font-weight: bold;
+    color: black;
+    float: left;
+    
+}
+
+.authBlock .form-group input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ffc10742;
+    color:black;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+select{
+    width: 107%;
+    padding: 20px;
+}
+
+#form1{
+  display: flex;
+ align-items: center;
+justify-content: space-evenly;
+margin-bottom: 20px;
+
+}
+#form2 label{
+    margin-left: 12px;
+}
+#form2 input{
+    width: 97%;
+   padding: 15px;
+} 
+
+.form-groups{
+  
+    margin-right: 405px;
+}
+
+.form-groups2 {
+  display: flex;
+  align-items: center; 
+  padding: 25px; 
+    margin-left: 25px;
+    border: 0.3px solid wheat;
+    background-color: whitesmoke;
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+.secBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+ 
+}
+.secBlock article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+  
+}
+.secBlock article img {
+  width: 100%;
+  height: 30vh;
+
+}
+.secBlock article div {
+  width: 23%;
+   height: 62vh;
+   margin: 15px;
+   /* background-color: #009e8c; */
+   border-bottom:5px solid #ffa520;
+  
+   border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+  
+}
+
+/* p
+{
+  font-size: 15px;
+  text-align: justify;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 10px;
+  line-height: 20px;
+}
+h3{
+    text-align: center;
+    color: #ffa520;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+h4{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin: 5px;
+
+
+} */
+#p1
+{
+    color: red;
+    font-size: 15px;
+    margin: 2px;
+    
+}
+
+#p2{
+   
+    width: 30%;
+    border-radius:  20px;;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.button {
+    width: 5%;
+    background-color: #1DE761;
+    transition: all 2s;
+    font-size: 20px;
+}
+.button:hover{
+    background-color: gray;
+}
+.contact-Page{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0px;
+}
+.form-group textarea{
+    width: 107%;
+    padding-bottom: 50px;
+}

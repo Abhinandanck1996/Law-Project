@@ -2,14 +2,19 @@ import React ,{useEffect, useRef, useState}from 'react';
 import Common from './Common';
 import MyImage from './Hill-img.jpeg';
 import MyImage1 from './image.jpg';
+import {AiOutlineLoading3Quarters} from 'react-icons/ai'
 
 const Home = () => {
 let [state,setState]=useState([])
+let[loading,setLoding]=useState(true)
 
  useEffect(()=>{
+   setTimeout(()=>{
     fetch("http://localhost:8000/posts").then((res)=>res.json()).then((Response)=>{
         setState(Response)
     }).catch(err=>console.log(err))
+    setLoding(false)
+   },[2000])
 },[state])
 
     return ( 
@@ -25,7 +30,9 @@ let [state,setState]=useState([])
       <div className="Main-div2">
             <h4>Conscientious estate planning care with exceptional results for Atlanta area residents.</h4>
         </div>
+       
         <div className="Main-div3">
+        {loading && <AiOutlineLoading3Quarters/>}
 {state.map(value=>{
     return(
         <div className='Main-subdiv'>
